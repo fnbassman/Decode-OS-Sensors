@@ -28,7 +28,7 @@ typedef enum {
     ERR, THG, WGR, PCR, BMP, VIN
 } SENSORTYPE;
 
-truct osSensor {
+struct osSensor {
   SENSORTYPE sType;
   time_t sampTime;
   int id;
@@ -81,7 +81,7 @@ float getBMP_Pressure();
 float getBMP_Temperature();
 float getVIN_Voltage();
 
-ENSORTYPE getSensorType();
+SENSORTYPE getSensorType();
 //int decodeOS(unsigned char *, int);
 struct osSensor * decodeOS(unsigned char *, int);
 int parseOsSensor(struct osSensor *);
